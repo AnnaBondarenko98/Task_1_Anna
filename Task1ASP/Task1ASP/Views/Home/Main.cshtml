@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Task1ASP.Models.Article>
+@section Menu{
+    <div class="navbar-right">
+        <div class="item">@Html.ActionLink("Main page", "Main", "Home")</div>
+        <div class="item">@Html.ActionLink("Guest page", "Guest", "Home")</div>
+        <div class="item">@Html.ActionLink("Questionnaire", "Questin", "Home")</div>
+    </div>
+}
+@{
+    ViewBag.Title = "Main page";
+}
+@foreach (Task1ASP.Models.Article item in Model)
+{
+    <div>
+
+        <dl class="dl-horizontal font-details">
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => item.Name)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Date)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => item.Date)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Text)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => item.Text, new { htmlAttributes = new { @class="animals"}})
+            </dd>
+        </dl>
+
+
+    </div>
+   
+}

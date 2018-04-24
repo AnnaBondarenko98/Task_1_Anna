@@ -1,0 +1,49 @@
+﻿@model Task1ASP.Models.Questionnaire
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.DisplayNameFor(model => model.About)
+  
+    @Html.EditorFor(model => model.About )
+    <br /><br />
+    @Html.DisplayName("Your age:");
+    @Html.EditorFor(model => model.Age)
+
+    <br /><br />
+
+    @Html.DisplayName("Favourite Animals");
+    <label class="checkbox ">
+        <input type="checkbox" name="names" checked="checked" value="Cat">Cat
+    </label>
+    <label class="checkbox ">
+        <input type="checkbox" name="names" checked="checked" value="Dog">Dog
+    </label>
+    <label class="checkbox ">
+        <input type="checkbox" name="names" checked="checked" value="Rabbit">Rabbit
+    </label>
+    <label class="checkbox ">
+        <input type="checkbox" name="names" checked="checked" value="Fox">Fox
+    </label>
+     
+   
+    <br /><br />
+    @Html.DisplayName("Favourite eye color ");
+    <label class="radio ">
+        <input type="radio" name="eye" checked="checked" value="Green">Green
+    </label>
+    <label class="radio ">
+        <input type="radio" name="eye" checked="checked" value="Gray">Gray
+    </label>
+    <label class="radio ">
+        <input type="radio" name="eye" checked="checked" value="Blue">Blue
+    </label>
+    <label class="radio">
+        <input type="radio" name="eye" checked="checked" value="Brown">Brown
+    </label>
+
+    <input type="submit" value="Send" class="btn btn-partial btn-default " />
+    <br />
+
+}

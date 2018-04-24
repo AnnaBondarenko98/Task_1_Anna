@@ -1,0 +1,104 @@
+﻿body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    background-color: aliceblue;
+    height: 100%;
+    margin: 0;
+    cursor: default !important;
+    line-height: normal;
+    padding-right: 0 !important;
+    color: #464547;
+    font-size: 14px;
+    font-family: 'Source Sans Pro Regular',Tahoma,sans-serif;
+    box-sizing: border-box;
+    /*background: url(../../images.jpg) repeat;*/
+    
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    width: 80%;
+    padding-top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: aliceblue;
+    vertical-align: bottom;
+    height: 100%;
+    padding-bottom: 70px;
+   
+}
+
+.navbar-fixed-bottom {
+    height: 30px;
+    background-color: #464547;
+    line-height: 50px;
+    color: #999;
+    position: fixed;
+}
+.navbar-right {
+    display: inline-block;
+    height: 100%;
+    min-width: 25%;
+    background-color: antiquewhite;
+    text-align: center;
+
+}
+.main {
+    display: inline-block;
+    width: 75%;
+}
+.item {
+    margin: 5%;
+}
+.font-details {
+    font-size: 15px;
+}
+
+.font-details dt {
+    border: 1px solid black;
+    margin: 2px;
+    border-radius: 50px 50px;
+    padding: 3px;
+    text-align: center;
+}
+
+.font-details dd {
+    text-align: center;
+    padding-top: 18px;
+}
+.itemcomment {
+    width: 75%;
+    box-shadow: none;
+    padding-top: 25px;
+    border: 1px solid;
+}
+textarea {
+    min-width: 700px;
+}
+.widthstatic {
+    text-wrap: normal;
+    min-height: 50px;
+    min-width: 700px;
+    text-align: left;
+}
+li  {
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px;
+}
+#toTop {
+    width:100px;
+    border:1px solid #ccc;
+    background:#f7f7f7;
+    text-align:center;
+    padding:5px;
+    position:fixed;
+    bottom:10px; /* отступ кнопки от нижнего края страницы*/
+    right:10px;
+    cursor:pointer;
+    display:none;
+    color:#333;
+    font-family:verdana;
+    font-size:11px;
+}

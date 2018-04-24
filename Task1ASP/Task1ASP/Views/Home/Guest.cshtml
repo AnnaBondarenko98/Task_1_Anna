@@ -1,0 +1,38 @@
+﻿@using Task1ASP.Models
+@model IEnumerable<Task1ASP.Models.Comment>
+
+@{
+    ViewBag.Title = "Main page";
+
+}
+
+@{
+    Html.RenderPartial("CommentPartial", new Comment());
+}
+
+<div>
+
+    @foreach (Comment b in Model)
+    {
+
+        <div class="item row itemcomment ">
+            <div class="col-md-2">
+                <div class="img-block">
+
+                    <div>@b.Date </div>
+
+                </div>
+            </div>
+            <div class="col-right col-md-10">
+                <div class="title"><h5>@b.Author</h5></div>
+                <div class="description ">
+                    @b.Text
+                </div>
+            </div>
+
+        </div>
+
+    }
+
+</div>
+<br />
