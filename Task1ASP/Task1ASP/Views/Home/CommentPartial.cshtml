@@ -1,0 +1,26 @@
+﻿@model Task1ASP.Models.Comment
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.DisplayNameFor(model => model.Text) 
+    <br />
+    <br />
+    @Html.EditorFor(model => model.Author, new { htmlAttributes = new { placeholder = "Author" } })
+
+    @Html.ValidationMessageFor(model => model.Author, "", new { @class = "text-danger" })
+    <br />
+    <br/>
+
+    @Html.EditorFor(model => model.Text, new { htmlAttributes = new { placeholder = "Add comment",@class= "widthstatic" } })
+
+    @Html.ValidationMessageFor(model => model.Text, "", new { @class = "text-danger" })
+
+    <br /><br />
+
+    <input type="submit" value="Send" class="btn btn-partial btn-default " />
+    <br />
+
+}
+

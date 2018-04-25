@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+ 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ 
+    <script type="text/javascript">
+ 
+        $(function() {
+ 
+            $(window).scroll(function() {
+ 
+                if($(this).scrollTop() != 0) {
+ 
+                    $('#toTop').fadeIn();
+ 
+                } else {
+ 
+                    $('#toTop').fadeOut();
+ 
+                }
+ 
+            });
+ 
+            $('#toTop').click(function() {
+ 
+                $('body,html').animate({scrollTop:0},800);
+ 
+            });
+ 
+        });
+ 
+    </script>
+</head>
+<body>
+
+<div id="up" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+
+            <img src="~/Content/logo_blog_English.png"></img>
+            @Html.ActionLink("My Blog", "Main", "Home", new {area = ""}, new {@class = "navbar-link "})
+
+        </div>
+
+    </div>
+</div>
+<div class="container body-content">
+    <div class="main"> @RenderBody()</div>
+    @RenderSection("Menu", false)
+
+</div>
+<hr/>
+<footer>
+    <span>&copy; @DateTime.Now.Year </span>
+    <button id="toTop">UP ^</button>
+</footer>
+@*<div class="navbar navbar-default  navbar-fixed-bottom ">
+    <div class="container">
+        &copy; @DateTime.Now.Year 
+    </div>
+</div>*@
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/Scripts/jquery-1.10.2.js")
+@Scripts.Render("~/Scripts/jquery.validate.min.js")
+@Scripts.Render("~/Scripts/jquery.validate.unobtrusive.js")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
+</body>
+</html>
